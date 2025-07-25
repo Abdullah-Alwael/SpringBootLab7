@@ -14,6 +14,7 @@ public class Student {
     @Pattern(regexp = "[a-zA-Z ]", message = "name must not have numbers or any special characters")
     private String name;
 
+    // can be empty
     private String currentClass;
 
     @NotNull(message = "currentLevel can not be empty")
