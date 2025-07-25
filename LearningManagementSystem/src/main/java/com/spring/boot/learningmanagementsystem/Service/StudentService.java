@@ -9,18 +9,18 @@ import java.util.ArrayList;
 public class StudentService {
     ArrayList<Student> students = new ArrayList<>();
 
-    public void addStudent(Student s){
+    public void addStudent(Student s) {
         students.add(s);
     }
 
-    public ArrayList<?> getStudents(){
+    public ArrayList<?> getStudents() {
         return students;
     }
 
-    public boolean updateStudent(String iD, Student student){
-        for (Student s:students){
-            if (s.getID().equals(iD)){
-                students.set(students.indexOf(s),student);
+    public boolean updateStudent(String iD, Student student) {
+        for (Student s : students) {
+            if (s.getID().equals(iD)) {
+                students.set(students.indexOf(s), student);
                 return true;
             }
         }
@@ -28,9 +28,9 @@ public class StudentService {
         return false;
     }
 
-    public boolean deleteStudent(String iD){
-        for (Student s:students){
-            if (s.getID().equals(iD)){
+    public boolean deleteStudent(String iD) {
+        for (Student s : students) {
+            if (s.getID().equals(iD)) {
                 students.remove(s);
                 return true;
             }
@@ -39,6 +39,26 @@ public class StudentService {
         return false;
     }
 
-
+//    public boolean attendClass(String iD, String subject){
+//        //TODO get class subject
+//        for (Student s : students) {
+//            if (s.getID().equals(iD)) {
+//
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+//
+//    public boolean attendClass(String iD, String subject){
+//        //TODO get class subject
+//        for (Student s : students) {
+//            if (s.getID().equals(iD)) {
+//
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 
 }
