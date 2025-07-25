@@ -39,12 +39,20 @@ public class SubjectService {
         return false;
     }
 
-    public void addAnswer(String answer) {
-        // TODO
+    public void addAnswer(String iD, String answer) {
+        for (Subject s : subjects) {
+            if (s.getID().equals(iD)) {
+                s.getCommonAnswers().add(answer);
+            }
+        }
     }
 
-    public void addAttendee(String name) {
-        // TODO
+    public void addAttendee(String iD, String name) {
+        for (Subject s : subjects) {
+            if (s.getID().equals(iD)) {
+                s.getAttendeesList().add(name);
+            }
+        }
     }
 
     public boolean upgradeLevel(String iD, int level) {
