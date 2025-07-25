@@ -39,5 +39,32 @@ public class SubjectService {
         return false;
     }
 
-    //TODO add the rest
+    public void addAnswer(String answer) {
+        // TODO
+    }
+
+    public void addAttendee(String name) {
+        // TODO
+    }
+
+    public boolean upgradeLevel(String iD, int level) {
+        // TODO check for level input validation in the controller
+
+        for (Subject s : subjects) {
+            if (s.getID().equals(iD)) {
+                s.setPrerequisiteLevel(level);
+                return true; // set successfully
+            }
+        }
+
+        return false; // subject not found
+    }
+
+    public void clearAttendees(String iD) {
+        for (Subject s : subjects) {
+            if (s.getID().equals(iD)) {
+                s.getAttendeesList().clear();
+            }
+        }
+    }
 }
